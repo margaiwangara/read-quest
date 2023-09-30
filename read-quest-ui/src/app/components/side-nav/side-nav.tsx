@@ -1,5 +1,13 @@
 'use client';
-import { Box, Container, VStack, HStack, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Container,
+  VStack,
+  HStack,
+  Text,
+  Flex,
+  Avatar,
+} from '@chakra-ui/react';
 import Link from 'next/link';
 import {
   IoHomeOutline,
@@ -11,13 +19,23 @@ import {
 export default function SideNavigation() {
   return (
     <Box as="aside" h="full" bg="brand.900" flex={1}>
-      <Container h="full">
-        <VStack spacing={1} h="full" alignItems="stretch" pt={10}>
-          <SideNavLink href="/" name="Home" icon={IoHomeOutline} active />
-          <SideNavLink href="/" name="Shop" icon={IoStorefrontOutline} />
-          <SideNavLink href="/" name="Articles" icon={IoNewspaperOutline} />
-          <SideNavLink href="/" name="About" icon={IoBookOutline} />
-        </VStack>
+      <Container h="full" py={7}>
+        <Flex h="full" direction="column" justify="space-between">
+          <VStack spacing={1} h="full" alignItems="stretch">
+            <SideNavLink href="/" name="Home" icon={IoHomeOutline} active />
+            <SideNavLink href="/" name="Shop" icon={IoStorefrontOutline} />
+            <SideNavLink href="/" name="Articles" icon={IoNewspaperOutline} />
+            <SideNavLink href="/" name="About" icon={IoBookOutline} />
+          </VStack>
+          <HStack spacing={2} align="center">
+            <Avatar
+              size="sm"
+              name="Margai Wangara"
+              src="https://bit.ly/broken-link"
+            />
+            <Text color="gray.500">Margai Wangara</Text>
+          </HStack>
+        </Flex>
       </Container>
     </Box>
   );
