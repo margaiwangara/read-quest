@@ -17,6 +17,20 @@ const theme = extendTheme({
     heading: inter.style.fontFamily,
     body: inter.style.fontWeight,
   },
+  colors: {
+    brand: {
+      50: '#EDF0F7',
+      100: '#CDD6E9',
+      200: '#ADBCDB',
+      300: '#8DA2CD',
+      400: '#6D88C0',
+      500: '#4D6DB2',
+      600: '#3E578E',
+      700: '#2E426B',
+      800: '#1F2C47',
+      900: '#0F1624',
+    },
+  },
 });
 
 export default function ChakraProvider({ children }: ChakraProviderProps) {

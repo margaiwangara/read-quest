@@ -1,3 +1,5 @@
+import { PageWrapper } from './components';
+
 export default function Home() {
-  return <section>Homepage</section>;
+  return <PageWrapper>Homepage</PageWrapper>;
 }

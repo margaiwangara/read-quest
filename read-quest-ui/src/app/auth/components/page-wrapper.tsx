@@ -12,7 +12,7 @@ export default function PageWrapper({ children }: PageWrapperProps) {
   const pathname = usePathname();
 
   return (
-    <Container maxW="container.xl" bg="white" h="100vh">
+    <Container maxW="container.xl" bg="white" h="100vh" overflowY="auto">
       <Center h="full">
         <VStack spacing={5}>
           <Heading size="lg">
